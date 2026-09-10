@@ -85,6 +85,20 @@ python3 -m venv .venv && .venv/bin/pip install reportlab pillow
 
 It lays out in one flowing column and breaks to a second page automatically if the content grows; page numbers only appear when there is more than one page.
 
+## IndexNow
+
+`29f239836caba5dbf0ed709c34f2a9c1.txt` at the site root is the IndexNow verification key. Submitting a URL
+tells Bing, DuckDuckGo, Yandex, Seznam and Naver to recrawl immediately instead
+of waiting for their own schedule. Google does not participate.
+
+```sh
+curl -X POST https://api.indexnow.org/indexnow \
+  -H 'Content-Type: application/json' \
+  -d '{"host":"knez.dev","key":"29f239836caba5dbf0ed709c34f2a9c1","keyLocation":"https://knez.dev/29f239836caba5dbf0ed709c34f2a9c1.txt","urlList":["https://knez.dev/"]}'
+```
+
+Do not delete the key file — the endpoint fetches it to prove you own the domain.
+
 ## Notes
 
 - **Theme** follows the OS by default; the toggle sets an explicit choice in `localStorage`. The inline script in `<head>` applies it before first paint, so there is no flash.
