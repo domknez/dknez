@@ -62,7 +62,7 @@ Delete Namecheap's default *URL Redirect* / parking records first, or the A reco
 - [x] `assets/og.png` — regenerate with `tools/make-og.py` if the photo or the strapline changes
 
 - [x] `files/Domagoj_Knez_CV.pdf`
-- [ ] GitHub and LinkedIn URLs in the contact section (currently `github.com/dknez`, `linkedin.com/in/dknez`)
+- [ ] GitHub and LinkedIn URLs in the contact section (currently `github.com/domknez`, `linkedin.com/in/dknez`)
 - [ ] Bump `lastmod` in `sitemap.xml` when you change the page
 
 ## SEO and AI search

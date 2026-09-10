@@ -130,7 +130,7 @@ y -= 26
 y = label(sx, y, "Contact")
 c.setFont("Mono", 7.1)
 for line in ["domagoj@coretech.hr", "+385 98 191 7958", "Zagreb, Croatia",
-             "knez.dev", "linkedin.com/in/dknez", "github.com/dknez"]:
+             "knez.dev", "linkedin.com/in/dknez", "github.com/domknez"]:
     c.setFillColor(INK2)
     c.drawString(sx, y, line)
     y -= 11.4

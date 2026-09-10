@@ -5,7 +5,7 @@
 Site: https://knez.dev/
 Contact: the address is published on the site; use the contact section at https://knez.dev/#contact
 CV (PDF): https://knez.dev/files/Domagoj_Knez_CV.pdf
-Profiles: https://github.com/dknez · https://www.linkedin.com/in/dknez
+Profiles: https://github.com/domknez · https://www.linkedin.com/in/dknez
 
 ## Current stack
 
