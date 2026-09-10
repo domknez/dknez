@@ -17,6 +17,8 @@ Other: REST, gRPC, SOAP, microservice architecture, SAP Hybris Commerce, Apache 
 
 ## Projects
 
+CoreTech engagements are listed alphabetically; everything after them is reverse-chronological.
+
 - **Bondio** (CoreTech, senior engineer): eSIM connectivity platform — an API for provisioning eSIMs across 1000+ networks in 200+ countries, used by travel businesses, IoT platforms and resellers. Backend services and the customer dashboard. Nest.js, React, AWS, Terraform, Docker.
 - **Fondion** (CoreTech): ERP for the construction industry. Python backend work, React frontend optimisation, migration from hand-written SQL to SQLAlchemy. FastAPI, SQLAlchemy, React, AWS, Docker.
 - **MontBlancAI** (CoreTech, lead engineer): industrial AI platform helping machine manufacturers cut downtime and optimise maintenance. Worked across the user interface, the backend services and the Alpinist AI core. Django, React, D3.js, Azure, Docker.

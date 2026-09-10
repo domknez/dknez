@@ -260,7 +260,8 @@ def project(y, name, role, desc, tech):
 
 
 y = company(y, "CoreTech d.o.o.", "Owner & Consultant", "2020 — present",
-            "Independent consultancy — long engagements, owning a slice of the product end to end.")
+            "Independent consultancy — long engagements, owning a slice of the product end to end. "
+            "Projects listed alphabetically.")
 y -= 2
 
 y = project(y, "Bondio", "Senior engineer",
