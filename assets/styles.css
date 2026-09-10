@@ -40,11 +40,11 @@
 
 /* ---------- base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+html { scroll-behavior: smooth; scroll-padding-top: 110px; overflow-x: clip; }
 body {
   margin: 0; background: var(--bg); color: var(--fg);
   font-family: var(--sans); font-size: 16px; line-height: 1.6;
-  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 img { max-width: 100%; display: block; }
 h1, h2, h3 { font-family: var(--disp); font-weight: 700; letter-spacing: -0.04em; line-height: 1; margin: 0; }
@@ -60,14 +60,22 @@ a:hover { color: var(--fg); }
 .skip:focus { left: 24px; }
 
 /* ---------- atmosphere ---------- */
+/* Everything decorative lives in here. It is fixed and clipped, so nothing
+   inside it can widen the page — an oversized glow used to push the layout
+   past the viewport on phones, which made Safari zoom the whole page out. */
+.backdrop { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
 .grain {
-  position: fixed; inset: 0; pointer-events: none; z-index: 1;
+  position: absolute; inset: 0; display: block;
   opacity: var(--grain-op); mix-blend-mode: var(--grain-mix);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
-.glow { position: absolute; border-radius: 50%; pointer-events: none; z-index: 0; }
+.glow { position: absolute; display: block; border-radius: 50%; }
 .glow--a { top: -300px; left: -200px; width: 940px; height: 940px; background: radial-gradient(circle, var(--glow) 0%, transparent 66%); }
-.glow--b { top: 700px; right: -340px; width: 880px; height: 880px; background: radial-gradient(circle, var(--wash) 0%, transparent 66%); }
+.glow--b { top: 40%; right: -340px; width: 880px; height: 880px; background: radial-gradient(circle, var(--wash) 0%, transparent 66%); }
+@media (max-width: 620px) {
+  .glow--a { top: -180px; left: -180px; width: 560px; height: 560px; }
+  .glow--b { top: 45%; right: -220px; width: 520px; height: 520px; }
+}
 
 /* ---------- nav ---------- */
 .topbar { position: sticky; top: 0; z-index: 20; display: flex; justify-content: center; padding: 24px 24px 0; }
