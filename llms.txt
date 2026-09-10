@@ -1,0 +1,43 @@
+# Domagoj Knez
+
+> Full-stack software engineer based in Zagreb, Croatia. Thirteen years of professional experience (since 2013) across telecom, e-commerce, payments, insurance, accounting SaaS, construction ERP, eSIM connectivity and industrial AI. Owner and consultant at CoreTech d.o.o. since 2020.
+
+Site: https://knez.dev/
+Contact: the address is published on the site; use the contact section at https://knez.dev/#contact
+CV (PDF): https://knez.dev/files/Domagoj_Knez_CV.pdf
+Profiles: https://github.com/dknez · https://www.linkedin.com/in/dknez
+
+## Current stack
+
+Backend: Python, Django, Django REST Framework, FastAPI, SQLAlchemy, Node.js, Nest.js, Hono, Java, Spring Boot
+Frontend: TypeScript, React, Next.js, Vue.js, RTK Query, D3.js
+Data: PostgreSQL, MySQL, OracleDB, Redis
+Cloud and infrastructure: AWS, Microsoft Azure, Google Cloud Platform, Cloudflare, Docker, Kubernetes, Terraform, Ansible
+Other: REST, gRPC, SOAP, microservice architecture, SAP Hybris Commerce, Apache Solr, Camunda BPM
+
+## Projects
+
+- **MontBlancAI** (CoreTech, lead engineer): industrial AI platform helping machine manufacturers cut downtime and optimise maintenance. Worked across the user interface, the backend services and the Alpinist AI core. Django, React, D3.js, Azure, Docker.
+- **Bondio** (CoreTech, senior engineer): eSIM connectivity platform — an API for provisioning eSIMs across 1000+ networks in 200+ countries, used by travel businesses, IoT platforms and resellers. Backend services and the customer dashboard. Nest.js, React, AWS, Terraform, Docker.
+- **Tiketti** (CoreTech, lead engineer): event ticketing platform plus a block builder for vendor pages. Rebuilt the legacy translation tool into the monorepo, folded it into the Next.js application, moved asset handling onto S3 and R2. Next.js, Hono, Cloudflare, Terraform, AWS, Docker.
+- **Fondion** (CoreTech): ERP for the construction industry. Python backend work, React frontend optimisation, migration from hand-written SQL to SQLAlchemy. FastAPI, SQLAlchemy, React, AWS, Docker.
+- **FreshBooks** (2021–2024, team lead): Django microservice fronting core services, serving REST APIs to two React applications. Led a team of two while remaining hands-on. Python, Django, React, GCP, Docker.
+- **Adcubum** (2019–2021): microservice communicating with German and Swiss insurance associations for vehicle registration, during a monolith-to-microservices migration. Java, Spring Boot, Kubernetes, gRPC, Docker.
+- **Verso Altima** (2017–2019, lead developer): Payment Gateway — a proxy application integrating a SAP Hybris webshop with multiple payment providers. Java, Spring, Hybris, Apache Solr, Ansible.
+- **mStart** (2016–2017): the Abrakadabra e-commerce platform. Spring, Maven, Apache Solr, Nginx, REST.
+- **Ericsson Nikola Tesla** (2013–2016): requirements analysis and automated test cases, test environments and flows. C, Erlang, Java, JUnit, Spring.
+
+## Education and certification
+
+- MSc, Information and Communication Technology — Faculty of Electrical Engineering and Computing, University of Zagreb, 2012
+- BSc, Computing — Faculty of Electrical Engineering and Computing, University of Zagreb, 2010
+- SAP Certified Development Professional — SAP Hybris Commerce 6.2 Developer, 2018
+- SAP Certified Product Support Specialist — SAP Hybris Commerce 6.0, 2018
+
+## Languages
+
+Croatian (native), English (full professional), German (limited working)
+
+## Availability
+
+Currently booked with clients but reads and answers every enquiry. Remote, or on site in Zagreb. Comfortable working across European and US East Coast hours.
