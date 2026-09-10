@@ -139,7 +139,7 @@ y -= 12
 y = label(sx, y, "Skills")
 SKILLS = [
     ("Backend", "Python, Django, DRF, FastAPI, SQLAlchemy, Node.js, Nest.js, Hono, Java, Spring Boot"),
-    ("Frontend", "TypeScript, React, Next.js, Vue.js, RTK Query, D3.js"),
+    ("Frontend", "TypeScript, React, Next.js, RTK Query, D3.js"),
     ("Data", "PostgreSQL, MySQL, OracleDB, Redis, Apache Solr"),
     ("Cloud & infra", "AWS, Azure, GCP, Cloudflare, Docker, Kubernetes, Terraform, Ansible"),
     ("Also", "REST, gRPC, SOAP, microservices, SAP Hybris, Camunda BPM"),

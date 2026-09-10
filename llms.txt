@@ -10,7 +10,7 @@ Profiles: https://github.com/domknez · https://www.linkedin.com/in/dknez
 ## Current stack
 
 Backend: Python, Django, Django REST Framework, FastAPI, SQLAlchemy, Node.js, Nest.js, Hono, Java, Spring Boot
-Frontend: TypeScript, React, Next.js, Vue.js, RTK Query, D3.js
+Frontend: TypeScript, React, Next.js, RTK Query, D3.js
 Data: PostgreSQL, MySQL, OracleDB, Redis
 Cloud and infrastructure: AWS, Microsoft Azure, Google Cloud Platform, Cloudflare, Docker, Kubernetes, Terraform, Ansible
 Other: REST, gRPC, SOAP, microservice architecture, SAP Hybris Commerce, Apache Solr, Camunda BPM
