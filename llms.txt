@@ -17,10 +17,10 @@ Other: REST, gRPC, SOAP, microservice architecture, SAP Hybris Commerce, Apache 
 
 ## Projects
 
-- **MontBlancAI** (CoreTech, lead engineer): industrial AI platform helping machine manufacturers cut downtime and optimise maintenance. Worked across the user interface, the backend services and the Alpinist AI core. Django, React, D3.js, Azure, Docker.
 - **Bondio** (CoreTech, senior engineer): eSIM connectivity platform — an API for provisioning eSIMs across 1000+ networks in 200+ countries, used by travel businesses, IoT platforms and resellers. Backend services and the customer dashboard. Nest.js, React, AWS, Terraform, Docker.
-- **Tiketti** (CoreTech, lead engineer): event ticketing platform plus a block builder for vendor pages. Rebuilt the legacy translation tool into the monorepo, folded it into the Next.js application, moved asset handling onto S3 and R2. Next.js, Hono, Cloudflare, Terraform, AWS, Docker.
 - **Fondion** (CoreTech): ERP for the construction industry. Python backend work, React frontend optimisation, migration from hand-written SQL to SQLAlchemy. FastAPI, SQLAlchemy, React, AWS, Docker.
+- **MontBlancAI** (CoreTech, lead engineer): industrial AI platform helping machine manufacturers cut downtime and optimise maintenance. Worked across the user interface, the backend services and the Alpinist AI core. Django, React, D3.js, Azure, Docker.
+- **Tiketti** (CoreTech, lead engineer): event ticketing platform plus a block builder for vendor pages. Rebuilt the legacy translation tool into the monorepo, folded it into the Next.js application, moved asset handling onto S3 and R2. Next.js, Hono, Cloudflare, Terraform, AWS, Docker.
 - **FreshBooks** (2021–2024, team lead): Django microservice fronting core services, serving REST APIs to two React applications. Led a team of two while remaining hands-on. Python, Django, React, GCP, Docker.
 - **Adcubum** (2019–2021): microservice communicating with German and Swiss insurance associations for vehicle registration, during a monolith-to-microservices migration. Java, Spring Boot, Kubernetes, gRPC, Docker.
 - **Verso Altima** (2017–2019, lead developer): Payment Gateway — a proxy application integrating a SAP Hybris webshop with multiple payment providers. Java, Spring, Hybris, Apache Solr, Ansible.
