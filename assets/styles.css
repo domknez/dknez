@@ -231,7 +231,8 @@ h2.eyebrow, h3.eyebrow { font-family: var(--mono); }
   background: var(--card2); color: var(--fg); font-size: 16px; font-weight: 500;
   transition: border-color .3s ease, transform .3s cubic-bezier(.2,.7,.2,1);
 }
-.links a span { color: var(--acc); }
+.links a > span:last-child { color: var(--acc); }
+.links__note { font-family: var(--mono); font-style: normal; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--fg3); margin-left: 10px; }
 .links a:hover { border-color: color-mix(in oklab, var(--acc) 45%, transparent); transform: translateY(-3px); }
 
 /* ---------- footer ---------- */
