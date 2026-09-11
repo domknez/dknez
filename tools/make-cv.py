@@ -280,7 +280,7 @@ y = project(y, "Takeaway", "",
             "Mobile food and drink ordering system taken from MVP to production. Backend refactoring, streamlined "
             "build and test pipelines, new features.",
             "Node.js · Hapi · JavaScript · Vue.js · PostgreSQL · Redis · Docker")
-y = project(y, "Tiketti", "Lead engineer",
+y = project(y, "Tiketti", "Team lead",
             "Event ticketing platform, plus a block builder vendors use to assemble their own pages. Rebuilt the legacy "
             "translation tool into the monorepo, folded it into the Next.js app and reworked S3 and R2 handling.",
             "Node.js · Next.js · TypeScript · Hono · Cloudflare · AWS · Terraform · Docker")
