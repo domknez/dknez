@@ -85,5 +85,11 @@
         visits.closest('.visits').hidden = false;
       })
       .catch(function () {});
+
+    // no hover on touch screens: a tap on the copyright toggles it instead
+    var who = document.querySelector('.foot__who');
+    if (who && window.matchMedia('(hover: none)').matches) {
+      who.addEventListener('click', function () { who.classList.toggle('is-shown'); });
+    }
   }
 })();

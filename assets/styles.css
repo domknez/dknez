@@ -244,6 +244,12 @@ h2.eyebrow, h3.eyebrow { font-family: var(--mono); }
   font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--fg3);
 }
 
+/* visitor count: present in the footer but only shows on hover (or a tap on touch) */
+.foot__who { cursor: default; }
+.visits { opacity: 0; transition: opacity .25s ease; }
+.foot__who:hover .visits,
+.foot__who.is-shown .visits { opacity: 1; }
+
 /* ---------- responsive ---------- */
 @media (max-width: 1180px) {
   :root { --gutter: 48px; }
