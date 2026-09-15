@@ -65,4 +65,25 @@
 
   var year = document.querySelector('.js-year');
   if (year) year.textContent = String(new Date().getFullYear());
+
+  /* ---- visitor counter ----
+     One request to a small Worker on count.knez.dev. No cookie, nothing
+     stored in the browser. The Worker counts each visitor once per day and
+     ignores crawlers. Browsers sending Do Not Track / Global Privacy Control
+     only read the number and are not counted. Headless browsers are skipped. */
+  var visits = document.querySelector('.js-visits');
+  if (visits && !navigator.webdriver) {
+    var optedOut = navigator.doNotTrack === '1' || navigator.globalPrivacyControl === true;
+    var base = 'https://count.knez.dev';
+    var req = optedOut
+      ? fetch(base + '/count', { mode: 'cors' })
+      : fetch(base + '/hit', { method: 'POST', mode: 'cors', keepalive: true });
+    req.then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d || typeof d.total !== 'number' || d.total < 1) return;
+        visits.textContent = d.total.toLocaleString('en');
+        visits.closest('.visits').hidden = false;
+      })
+      .catch(function () {});
+  }
 })();

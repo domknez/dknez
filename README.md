@@ -29,15 +29,22 @@ tools/
 python3 -m http.server 8000   # then open http://localhost:8000
 ```
 
+## DNS
+
+knez.dev is registered at Namecheap; DNS is served by Cloudflare (nameservers
+`dell` / `sean.ns.cloudflare.com`). The GitHub Pages A records and the `www`
+CNAME are **DNS only** (grey cloud) on purpose — GitHub issues and renews the
+certificate and must see its own IPs. Proxying them would break that.
+
 ## Deploy to GitHub Pages
 
 1. Push to a repo. For `https://<user>.github.io` name the repo `<user>.github.io`; any other name serves at `https://<user>.github.io/<repo>/`.
 2. Settings -> Pages -> Source: *Deploy from a branch*, branch `main`, folder `/ (root)`.
 3. `.nojekyll` is already here so Jekyll does not touch the files.
 
-### Custom domain (knez.dev, registered at Namecheap)
+### Custom domain
 
-`CNAME` already contains `knez.dev`. In Namecheap -> Domain List -> Manage -> *Advanced DNS*, using Namecheap BasicDNS:
+`CNAME` already contains `knez.dev`. Records live in Cloudflare (see DNS above):
 
 | Type | Host | Value |
 | --- | --- | --- |
@@ -98,6 +105,29 @@ curl -X POST https://api.indexnow.org/indexnow \
 ```
 
 Do not delete the key file — the endpoint fetches it to prove you own the domain.
+
+## Visitor counter (`worker/`)
+
+A Cloudflare Worker at `count.knez.dev` with a D1 database. The page POSTs
+`/hit` once per load; the Worker counts a visitor at most once per day using
+`sha256(secret | date | ip | user-agent)` — no cookie, unlinkable across days,
+rows purged after 48 h — and ignores crawlers via Cloudflare's verified-bot
+flag plus a user-agent pattern. `GET /count` returns `{ total, today }`.
+Browsers with Do Not Track or Global Privacy Control are shown the number but
+not counted.
+
+First deploy, from `worker/`:
+
+```sh
+npx wrangler login                       # opens a browser, once
+npx wrangler d1 create knez-counter      # paste the database_id it prints into wrangler.toml
+npx wrangler d1 migrations apply knez-counter --remote
+openssl rand -hex 32 | npx wrangler secret put SALT
+npx wrangler deploy                      # also creates the count.knez.dev DNS record
+```
+
+Later deploys are just `npx wrangler deploy`. Check it with
+`curl https://count.knez.dev/count`.
 
 ## Notes
 

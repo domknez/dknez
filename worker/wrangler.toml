@@ -1,0 +1,17 @@
+name = "knez-counter"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# Served at count.knez.dev — Cloudflare creates the DNS record itself.
+routes = [
+  { pattern = "count.knez.dev", custom_domain = true }
+]
+
+[vars]
+ALLOWED_ORIGINS = "https://knez.dev,https://www.knez.dev"
+
+# database_id is filled in by `wrangler d1 create knez-counter` — see README.
+[[d1_databases]]
+binding = "DB"
+database_name = "knez-counter"
+database_id = "e1c84b45-c4ac-4298-931f-f8b98ea6d3cf"
