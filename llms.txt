@@ -18,8 +18,8 @@ Other: REST, gRPC, SOAP, microservice architecture, SAP Hybris Commerce, Apache 
 ## Current personal project
 
 - **dust** (open source, MIT): a free, ultra-lightweight Deezer desktop client written in
-  Rust with AirPlay 2 streaming built in. ~8 MB binary and ~85 MB memory against the official
-  client's 300 MB and 400 MB; no ads, no telemetry. Flow and recommendations, search, likes,
+  Rust with AirPlay 2 streaming built in. A 19 MB application against the official client's
+  466 MB, running as a single process; no ads, no telemetry. Flow and recommendations, search, likes,
   queue, FLAC, Last.fm scrobbling, AirPlay 1 and 2 output with automatic discovery.
   Source: https://github.com/domknez/dust
 

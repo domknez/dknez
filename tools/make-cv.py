@@ -93,7 +93,7 @@ def label(x, y, text, width=None, colour=None):
         c.setLineWidth(0.6)
         tw = pdfmetrics.stringWidth(up, "MonoMed", 6.6) + 1.5 * len(up) + 10
         c.line(x + tw, y + 2.2, x + width, y + 2.2)
-    return y - 14
+    return y - 12
 
 
 # ───────────────────────── page 1: sidebar ─────────────────────────
@@ -211,16 +211,15 @@ def block_height(lines_specs):
 y = TOP
 y = label(CX, y, "Profile", CW)
 y = para(CX, y,
-         "Full-stack engineer, thirteen years across telecom, e-commerce, payments, insurance, accounting "
-         "SaaS, eSIM connectivity and industrial AI. Own consultancy since 2020, working end to end: Python "
-         "and Django on one side, TypeScript and React on the other, AWS, Azure or GCP underneath.",
-         "Sans", 8.1, INK2, CW, 11.0, 13)
-
-y = label(CX, y, "Experience", CW)
+         "Full-stack engineer, thirteen years across telecom, e-commerce, payments, insurance, SaaS, eSIM "
+         "connectivity and industrial AI. Own consultancy since 2020: Python and Django on one side, "
+         "TypeScript and React on the other, AWS, Azure or GCP underneath.",
+         "Sans", 8.1, INK2, CW, 10.8, 10)
 
 
 def company(y, name, role, dates, blurb=None):
-    need = 22 + (len(wrap(blurb, "Sans", 7.9, CW)) * 10.4 if blurb else 0) + 38
+    # name + role + blurb + the tech line that follows the block
+    need = 23 + (len(wrap(blurb, "Sans", 7.9, CW)) * 10.4 if blurb else 0) + 18
     if y - need < BOTTOM:
         y = new_page()
     c.setFont("DispSemi", 11.5)
@@ -229,11 +228,11 @@ def company(y, name, role, dates, blurb=None):
     c.setFont("Mono", 7)
     c.setFillColor(INK3)
     c.drawRightString(CX + CW, y + 0.6, dates)
-    y -= 11.0
+    y -= 10.4
     c.setFont("SansMed", 8.0)
     c.setFillColor(ACC)
     c.drawString(CX, y, role)
-    y -= 11
+    y -= 10.4
     if blurb:
         y = para(CX, y, blurb, "Sans", 7.9, INK2, CW, 10.4, 2)
     return y
@@ -254,10 +253,19 @@ def project(y, name, role, desc, tech):
         c.setFillColor(INK3)
         c.drawString(CX + off, y + 0.4, role)
     y -= 10.2
-    y = para(CX + 11, y, desc, "Sans", 7.9, INK2, CW - 11, 10.1, 1)
-    y = para(CX + 11, y, tech, "Mono", 6.6, INK3, CW - 11, 8.6, 6)
+    y = para(CX + 11, y, desc, "Sans", 7.9, INK2, CW - 11, 9.9, 1)
+    y = para(CX + 11, y, tech, "Mono", 6.6, INK3, CW - 11, 8.4, 4)
     return y
 
+
+y = label(CX, y, "Open source", CW)
+y = project(y, "dust", "Personal project, 2026 —",
+            "Ultra-lightweight Deezer desktop client in Rust with AirPlay 2 built in: a 19 MB app against the "
+            "official client's 466, running as a single process. Flow, search, likes, queue, FLAC, Last.fm "
+            "scrobbling, AirPlay discovery. MIT licensed.",
+            "Rust · AirPlay 2 · macOS, Linux, Windows · github.com/domknez/dust")
+y -= 3
+y = label(CX, y, "Experience", CW)
 
 y = company(y, "CoreTech d.o.o.", "Owner & Consultant", "2020 — present",
             "Independent consultancy — long engagements, owning a slice of the product end to end. "
@@ -273,8 +281,8 @@ y = project(y, "Fondion", "",
             "from hand-written SQL to the SQLAlchemy ORM.",
             "Python · FastAPI · SQLAlchemy · Alembic · React · PostgreSQL · AWS · Docker")
 y = project(y, "MontBlancAI", "Lead engineer",
-            "Industrial AI platform helping machine manufacturers cut downtime and optimise maintenance. Full product "
-            "stack: the interface, the backend services, and the Alpinist AI core that turns machine data into insight.",
+            "Industrial AI platform cutting machine downtime and optimising maintenance. Full product stack: "
+            "interface, backend services, and the Alpinist AI core that turns machine data into insight.",
             "Django · DRF · React · TypeScript · RTK Query · D3.js · PostgreSQL · Azure · Docker")
 y = project(y, "Takeaway", "",
             "Mobile food and drink ordering system taken from MVP to production. Backend refactoring, streamlined "
@@ -289,37 +297,27 @@ y = company(y, "FreshBooks", "Senior Software Engineer & Team Lead", "Jun 2021 �
             "Django microservice with DRF fronting core services, serving REST APIs to two React applications. Moved "
             "into a lead role for two engineers while staying hands-on.")
 y = para(CX, y, "Python · Django · DRF · React · Tailwind · MySQL · GCP · Docker",
-         "Mono", 6.6, INK3, CW, 8.6, 12)
+         "Mono", 6.6, INK3, CW, 8.4, 7)
 
 y = company(y, "Adcubum", "Senior Software Engineer", "Dec 2019 — Jun 2021",
             "Microservice for communication with German and Swiss insurance associations, supporting vehicle "
             "registration inside a move to microservice architecture.")
 y = para(CX, y, "Java · Spring Boot · OracleDB · Kubernetes · gRPC · Camunda BPM · Docker",
-         "Mono", 6.6, INK3, CW, 8.6, 12)
+         "Mono", 6.6, INK3, CW, 8.4, 7)
 
 y = company(y, "Verso Altima Group", "Java Developer Expert", "May 2017 — Dec 2019",
             "Lead developer on the Payment Gateway: a proxy integrating the new SAP Hybris webshop with a range of "
             "payment providers.")
 y = para(CX, y, "Java · Spring · SAP Hybris · Apache Solr · Nginx · REST · SOAP · Ansible",
-         "Mono", 6.6, INK3, CW, 8.6, 12)
+         "Mono", 6.6, INK3, CW, 8.4, 7)
 
 y = company(y, "mStart d.o.o.", "E-Commerce Specialist", "Feb 2016 — May 2017",
             "Developed Abrakadabra, a new e-commerce platform.")
-y = para(CX, y, "Spring · Maven · Apache Solr · Nginx · REST", "Mono", 6.6, INK3, CW, 8.6, 12)
+y = para(CX, y, "Spring · Maven · Apache Solr · Nginx · REST", "Mono", 6.6, INK3, CW, 8.4, 7)
 
 y = company(y, "Ericsson Nikola Tesla d.d.", "Software Developer", "Sep 2013 — Feb 2016",
             "Requirements analysis and automated test cases; new test environments and automated test flows.")
-y = para(CX, y, "C · Erlang · Java · JUnit · Spring · Git · Bash", "Mono", 6.6, INK3, CW, 8.6, 12)
-
-if y - 26 < BOTTOM:
-    y = new_page()
-c.setStrokeColor(LINE)
-c.setLineWidth(0.6)
-c.line(CX, y + 4, CX + CW, y + 4)
-y -= 10
-c.setFont("Mono", 6.8)
-c.setFillColor(INK3)
-c.drawString(CX, y, "References available on request.")
+y = para(CX, y, "C · Erlang · Java · JUnit · Spring · Git · Bash", "Mono", 6.6, INK3, CW, 8.4, 7)
 
 if MULTIPAGE:
     c.setFont("Mono", 6.6)
