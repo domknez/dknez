@@ -60,6 +60,7 @@
     <div class="nav__links" id="nav-links">
       <a href="#range">Range</a>
       <a href="#coretech">CoreTech</a>
+      <a href="#dust">dust</a>
       <a href="#projects">Projects</a>
       <a href="files/Domagoj_Knez_CV.pdf">Resume</a>
       <button class="nav__theme" type="button" aria-label="Switch between light and dark">
@@ -114,13 +115,24 @@
     <article class="card feature">
       <p class="feature__tags"><span class="pill pill--accent">Owner &amp; consultant</span><span class="pill pill--quiet">Since 2020</span></p>
       <h3>CoreTech d.o.o.</h3>
-      <p>I take the contract, do the work, and stay accountable for it. Engagements run long: I join as a senior pair of hands, own a slice end to end, and hand back code the next person can read. Four products so far — industrial AI, event ticketing, construction ERP and food ordering.</p>
+      <p class="feature__body">I take the contract, do the work, and stay accountable for it. Engagements run long: I join as a senior pair of hands, own a slice end to end, and hand back code the next person can read. Four products so far — industrial AI, event ticketing, construction ERP and food ordering.</p>
+    </article>
+  </section>
+
+  <section id="dust" aria-labelledby="dust-h">
+    <h2 class="eyebrow" id="dust-h"><span>03</span><span>Currently building</span></h2>
+    <article class="card feature">
+      <p class="feature__tags"><span class="pill pill--accent">Open source</span><span class="pill pill--quiet">MIT &middot; nights and weekends</span></p>
+      <h3>dust</h3>
+      <p class="feature__body">A free, ultra-lightweight Deezer desktop client written in Rust, with AirPlay&nbsp;2 streaming built in. An 8&nbsp;MB binary against the official client&rsquo;s 300, and ~85&nbsp;MB of memory against 400 — no ads, no telemetry, no account with me. Flow and recommendations, search, likes, queue, FLAC, Last.fm scrobbling, and speaker buttons that actually control it.</p>
+      <ul class="tech tech--left"><li class="tk tk-sys">Rust</li><li class="tk tk-inf">AirPlay 2</li><li class="tk tk-dat">macOS &middot; Linux &middot; Windows</li></ul>
+      <p class="feature__link"><a href="https://github.com/domknez/dust">github.com/domknez/dust <span aria-hidden="true">&#8599;</span></a></p>
     </article>
   </section>
 
   <section id="projects" aria-labelledby="projects-h">
     <div class="eyebrow eyebrow--split">
-      <h2 class="eyebrow__l" id="projects-h"><span>03</span><span>Projects</span></h2>
+      <h2 class="eyebrow__l" id="projects-h"><span>04</span><span>Projects</span></h2>
       <span class="pill pill--quiet">CoreTech projects listed alphabetically</span>
     </div>
     <ol class="projects">
@@ -194,7 +206,7 @@
       <div class="contact__glow" aria-hidden="true"></div>
       <div class="contact__grid">
         <div>
-          <p class="eyebrow eyebrow--acc">04 — Contact</p>
+          <p class="eyebrow eyebrow--acc">05 — Contact</p>
           <h2 id="contact-h">Tell me what&rsquo;s stuck.</h2>
           <p class="lede">I read and answer every message — fit or not. If it is a fit you will hear that fast; if it is not, I will say so and try to point you somewhere better. Remote or Zagreb, comfortable across EU and US East Coast hours.</p>
           <a class="btn btn--accent btn--mail js-mail" href="#" data-u="domagoj" data-d="coretech.hr" data-s="Project enquiry">
@@ -257,7 +269,7 @@
         "@type": "Occupation",
         "name": "Full-Stack Software Engineer",
         "occupationLocation": { "@type": "City", "name": "Zagreb" },
-        "skills": "Python, Django, FastAPI, SQLAlchemy, TypeScript, JavaScript, React, Next.js, Node.js, Nest.js, Hono, Java, Spring Boot, SAP Hybris, PostgreSQL, MySQL, Redis, AWS, Microsoft Azure, Google Cloud, Docker, Kubernetes, Terraform, Cloudflare, gRPC, REST, microservices"
+        "skills": "Python, Django, FastAPI, SQLAlchemy, TypeScript, JavaScript, React, Next.js, Node.js, Nest.js, Hono, Rust, Java, Spring Boot, SAP Hybris, PostgreSQL, MySQL, Redis, AWS, Microsoft Azure, Google Cloud, Docker, Kubernetes, Terraform, Cloudflare, gRPC, REST, microservices"
       },
       "alumniOf": {
         "@type": "CollegeOrUniversity",
@@ -273,8 +285,19 @@
         { "@type": "Language", "name": "English" },
         { "@type": "Language", "name": "German" }
       ],
-      "knowsAbout": ["Python", "Django", "FastAPI", "TypeScript", "React", "Next.js", "Node.js", "Nest.js", "Java", "Spring Boot", "PostgreSQL", "AWS", "Microsoft Azure", "Google Cloud Platform", "Terraform", "Docker", "Kubernetes", "microservices", "API design", "e-commerce", "payment gateways", "insurance systems", "industrial AI", "ERP"],
+      "knowsAbout": ["Python", "Django", "FastAPI", "TypeScript", "React", "Next.js", "Node.js", "Nest.js", "Rust", "Java", "Spring Boot", "PostgreSQL", "AWS", "Microsoft Azure", "Google Cloud Platform", "Terraform", "Docker", "Kubernetes", "microservices", "API design", "e-commerce", "payment gateways", "insurance systems", "industrial AI", "ERP"],
       "sameAs": ["https://github.com/domknez", "https://www.linkedin.com/in/dknez"]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://knez.dev/#dust",
+      "name": "dust",
+      "description": "A free and open source, ultra-lightweight Deezer desktop client written in Rust, with AirPlay 2 streaming built in.",
+      "codeRepository": "https://github.com/domknez/dust",
+      "programmingLanguage": "Rust",
+      "license": "https://opensource.org/licenses/MIT",
+      "author": { "@id": "https://knez.dev/#person" },
+      "operatingSystem": ["macOS", "Linux", "Windows"]
     },
     {
       "@type": "Organization",
