@@ -15,13 +15,17 @@ Data: PostgreSQL, MySQL, OracleDB, Redis
 Cloud and infrastructure: AWS, Microsoft Azure, Google Cloud Platform, Cloudflare, Docker, Kubernetes, Terraform, Ansible
 Other: REST, gRPC, SOAP, microservice architecture, SAP Hybris Commerce, Apache Solr, Camunda BPM
 
-## Current personal project
+## Current personal projects
 
-- **dust** (open source, MIT): a free, ultra-lightweight Deezer desktop client written in
-  Rust with AirPlay 2 streaming built in. A 19 MB application against the official client's
-  466 MB, running as a single process; no ads, no telemetry. Flow and recommendations, search, likes,
-  queue, FLAC, Last.fm scrobbling, AirPlay 1 and 2 output with automatic discovery.
-  Source: https://github.com/domknez/dust
+Both are mine, written in Rust, MIT licensed, no ads and no telemetry.
+
+- **dust**: an ultra-lightweight desktop music player for a streaming service and a personal
+  library at once — Deezer and Navidrome/Subsonic — with AirPlay 2 streaming built in. Flow and
+  recommendations, search, likes, queue, FLAC, Last.fm scrobbling, AirPlay 1 and 2 discovery.
+  macOS, Linux and Windows. Source: https://github.com/domknez/dust
+- **haze**: dust's sibling, an ultra-lightweight desktop IPTV player. M3U playlists and Xtream
+  Codes logins, an XMLTV guide with catch-up, movies, favourites and zapping, and the same
+  AirPlay 2 output. macOS, Linux and Windows. Source opening shortly.
 
 ## Projects
 

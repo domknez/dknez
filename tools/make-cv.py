@@ -211,9 +211,9 @@ def block_height(lines_specs):
 y = TOP
 y = label(CX, y, "Profile", CW)
 y = para(CX, y,
-         "Full-stack engineer, thirteen years across telecom, e-commerce, payments, insurance, SaaS, eSIM "
-         "connectivity and industrial AI. Own consultancy since 2020: Python and Django on one side, "
-         "TypeScript and React on the other, AWS, Azure or GCP underneath.",
+         "Full-stack engineer, thirteen years across telecom, e-commerce, payments, insurance, SaaS, eSIM and "
+         "industrial AI. Own consultancy since 2020: Python and Django on one side, TypeScript and React on "
+         "the other, AWS, Azure or GCP underneath.",
          "Sans", 8.1, INK2, CW, 10.8, 10)
 
 
@@ -260,10 +260,13 @@ def project(y, name, role, desc, tech):
 
 y = label(CX, y, "Open source", CW)
 y = project(y, "dust", "Personal project, 2026 —",
-            "Ultra-lightweight Deezer desktop client in Rust with AirPlay 2 built in: a 19 MB app against the "
-            "official client's 466, running as a single process. Flow, search, likes, queue, FLAC, Last.fm "
-            "scrobbling, AirPlay discovery. MIT licensed.",
+            "Ultra-lightweight desktop music player in Rust: a streaming service and a personal library at "
+            "once — Deezer and Navidrome — with AirPlay 2 built in. MIT.",
             "Rust · AirPlay 2 · macOS, Linux, Windows · github.com/domknez/dust")
+y = project(y, "haze", "Personal project, 2026 —",
+            "dust's sibling, an IPTV player in Rust: M3U and Xtream Codes, an XMLTV guide with catch-up, "
+            "movies, the same AirPlay 2 output. MIT, releasing shortly.",
+            "Rust · FFmpeg · AirPlay 2 · macOS, Linux, Windows")
 y -= 3
 y = label(CX, y, "Experience", CW)
 
@@ -273,8 +276,8 @@ y = company(y, "CoreTech d.o.o.", "Owner & Consultant", "2020 — present",
 y -= 2
 
 y = project(y, "Bondio", "Senior engineer",
-            "eSIM connectivity API for travel businesses, IoT platforms and resellers — 1000+ networks across 200+ "
-            "countries. Backend services and the customer-facing dashboard.",
+            "eSIM connectivity API for travel businesses, IoT platforms and resellers, across 1000+ networks in 200+ "
+            "countries. Backend services and the customer dashboard.",
             "Nest.js · React · AWS · Terraform · Docker")
 y = project(y, "Fondion", "",
             "ERP for the construction industry. Python backend, React frontend optimisation, and the team's migration "
@@ -283,14 +286,14 @@ y = project(y, "Fondion", "",
 y = project(y, "MontBlancAI", "Lead engineer",
             "Industrial AI platform cutting machine downtime and optimising maintenance. Full product stack: "
             "interface, backend services, and the Alpinist AI core that turns machine data into insight.",
-            "Django · DRF · React · TypeScript · RTK Query · D3.js · PostgreSQL · Azure · Docker")
+            "Django · DRF · React · TypeScript · D3.js · PostgreSQL · Azure · Docker")
 y = project(y, "Takeaway", "",
-            "Mobile food and drink ordering system taken from MVP to production. Backend refactoring, streamlined "
-            "build and test pipelines, new features.",
+            "Mobile food and drink ordering system taken from MVP to production: backend refactoring, build and "
+            "test pipelines, new features.",
             "Node.js · Hapi · JavaScript · Vue.js · PostgreSQL · Redis · Docker")
 y = project(y, "Tiketti", "Team lead",
-            "Event ticketing platform, plus a block builder vendors use to assemble their own pages. Rebuilt the legacy "
-            "translation tool into the monorepo, folded it into the Next.js app and reworked S3 and R2 handling.",
+            "Event ticketing platform plus a block builder for vendor pages. Rebuilt the legacy translation tool "
+            "into the monorepo and reworked S3 and R2 handling.",
             "Node.js · Next.js · TypeScript · Hono · Cloudflare · AWS · Terraform · Docker")
 
 y = company(y, "FreshBooks", "Senior Software Engineer & Team Lead", "Jun 2021 — Nov 2024",
@@ -306,8 +309,7 @@ y = para(CX, y, "Java · Spring Boot · OracleDB · Kubernetes · gRPC · Camund
          "Mono", 6.6, INK3, CW, 8.4, 7)
 
 y = company(y, "Verso Altima Group", "Java Developer Expert", "May 2017 — Dec 2019",
-            "Lead developer on the Payment Gateway: a proxy integrating the new SAP Hybris webshop with a range of "
-            "payment providers.")
+            "Lead developer on the Payment Gateway, a proxy integrating the new SAP Hybris webshop with a range of payment providers.")
 y = para(CX, y, "Java · Spring · SAP Hybris · Apache Solr · Nginx · REST · SOAP · Ansible",
          "Mono", 6.6, INK3, CW, 8.4, 7)
 
