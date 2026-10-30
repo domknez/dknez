@@ -29,7 +29,7 @@ no browser engine, no idle CPU, no ads and no telemetry.
   Source: https://github.com/domknez/haze
 - **drift**: a lighter desktop client for Microsoft Teams chats and channels. Sign-in with a work
   or school account through Microsoft's own page, tokens in the system keychain, chats and
-  channels with threads, reactions, search and notifications. Early days; source opening shortly.
+  channels with threads, reactions, search and notifications. Early days. Source: https://github.com/domknez/drift
 
 All three run on macOS, Linux and Windows.
 

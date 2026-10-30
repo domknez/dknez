@@ -267,7 +267,7 @@ y = project(y, "haze", "2026 —",
             "Rust · FFmpeg · github.com/domknez/haze")
 y = project(y, "drift", "2026 —",
             "Lighter desktop client for Microsoft Teams: chats, channels and threads. Early days.",
-            "Rust · WebSockets · OAuth · releasing shortly")
+            "Rust · WebSockets · OAuth · github.com/domknez/drift")
 y -= 3
 y = label(CX, y, "Experience", CW)
 
