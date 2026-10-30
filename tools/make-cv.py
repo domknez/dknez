@@ -258,16 +258,49 @@ def project(y, name, role, desc, tech):
     return y
 
 
+def oss(y, name, desc, tech):
+    """Bullet, bold name, then the description continuing on the same line."""
+    name_w = pdfmetrics.stringWidth(name + " \u2014 ", "SansBold", 8.4)
+    first_w = CW - 11 - name_w
+    words, lines, cur, width = desc.split(), [], "", first_w
+    for w in words:
+        trial = (cur + " " + w).strip()
+        if pdfmetrics.stringWidth(trial, "Sans", 7.9) <= width:
+            cur = trial
+        else:
+            lines.append(cur)
+            cur, width = w, CW - 11
+    if cur:
+        lines.append(cur)
+
+    need = len(lines) * 9.9 + len(wrap(tech, "Mono", 6.6, CW - 11)) * 8.4 + 10
+    if y - need < BOTTOM:
+        y = new_page()
+
+    c.setFillColor(ACC)
+    c.rect(CX + 1.5, y + 2.2, 3, 3, stroke=0, fill=1)
+    c.setFont("SansBold", 8.4)
+    c.setFillColor(INK)
+    c.drawString(CX + 11, y, name + " \u2014 ")
+    c.setFont("Sans", 7.9)
+    c.setFillColor(INK2)
+    c.drawString(CX + 11 + name_w, y, lines[0])
+    y -= 9.9
+    for ln in lines[1:]:
+        c.drawString(CX + 11, y, ln)
+        y -= 9.9
+    return para(CX + 11, y, tech, "Mono", 6.6, INK3, CW - 11, 8.4, 6)
+
 y = label(CX, y, "Open source", CW)
-y = project(y, "dust", "2026 —",
-            "Desktop music player for Deezer and a Navidrome library, with AirPlay 2 built in.",
-            "Rust · AirPlay 2 · github.com/domknez/dust")
-y = project(y, "haze", "2026 —",
-            "Desktop IPTV player: M3U, Xtream Codes, XMLTV guide with catch-up and VOD.",
-            "Rust · FFmpeg · github.com/domknez/haze")
-y = project(y, "drift", "2026 —",
-            "Lighter desktop client for Microsoft Teams: chats, channels and threads. Early days.",
-            "Rust · WebSockets · OAuth · github.com/domknez/drift")
+y = oss(y, "dust",
+        "music player for Deezer and a Navidrome library, with AirPlay 2 built in.",
+        "Rust \u00b7 AirPlay 2 \u00b7 github.com/domknez/dust")
+y = oss(y, "haze",
+        "IPTV player: M3U, Xtream Codes, an XMLTV guide with catch-up, VOD.",
+        "Rust \u00b7 FFmpeg \u00b7 github.com/domknez/haze")
+y = oss(y, "drift",
+        "lighter desktop client for Microsoft Teams chats and channels.",
+        "Rust \u00b7 WebSockets \u00b7 OAuth \u00b7 github.com/domknez/drift")
 y -= 3
 y = label(CX, y, "Experience", CW)
 
