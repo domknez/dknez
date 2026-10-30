@@ -17,15 +17,21 @@ Other: REST, gRPC, SOAP, microservice architecture, SAP Hybris Commerce, Apache 
 
 ## Current personal projects
 
-Both are mine, written in Rust, MIT licensed, no ads and no telemetry.
+Three siblings, all mine, all written in Rust and MIT licensed: one native process each,
+no browser engine, no idle CPU, no ads and no telemetry.
 
 - **dust**: an ultra-lightweight desktop music player for a streaming service and a personal
   library at once — Deezer and Navidrome/Subsonic — with AirPlay 2 streaming built in. Flow and
   recommendations, search, likes, queue, FLAC, Last.fm scrobbling, AirPlay 1 and 2 discovery.
-  macOS, Linux and Windows. Source: https://github.com/domknez/dust
-- **haze**: dust's sibling, an ultra-lightweight desktop IPTV player. M3U playlists and Xtream
-  Codes logins, an XMLTV guide with catch-up, movies, favourites and zapping, and the same
-  AirPlay 2 output. macOS, Linux and Windows. Source opening shortly.
+  Source: https://github.com/domknez/dust
+- **haze**: a desktop IPTV player. M3U playlists and Xtream Codes logins, an XMLTV guide with
+  catch-up, movies and series, favourites and zapping, and the same AirPlay 2 output.
+  Source: https://github.com/domknez/haze
+- **drift**: a lighter desktop client for Microsoft Teams chats and channels. Sign-in with a work
+  or school account through Microsoft's own page, tokens in the system keychain, chats and
+  channels with threads, reactions, search and notifications. Early days; source opening shortly.
+
+All three run on macOS, Linux and Windows.
 
 ## Projects
 

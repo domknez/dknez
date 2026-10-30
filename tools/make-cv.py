@@ -259,14 +259,15 @@ def project(y, name, role, desc, tech):
 
 
 y = label(CX, y, "Open source", CW)
-y = project(y, "dust", "Personal project, 2026 —",
-            "Ultra-lightweight desktop music player in Rust: a streaming service and a personal library at "
-            "once — Deezer and Navidrome — with AirPlay 2 built in. MIT.",
-            "Rust · AirPlay 2 · macOS, Linux, Windows · github.com/domknez/dust")
-y = project(y, "haze", "Personal project, 2026 —",
-            "dust's sibling, an IPTV player in Rust: M3U and Xtream Codes, an XMLTV guide with catch-up, "
-            "movies, the same AirPlay 2 output. MIT, releasing shortly.",
-            "Rust · FFmpeg · AirPlay 2 · macOS, Linux, Windows")
+y = project(y, "dust", "2026 —",
+            "Desktop music player for Deezer and a Navidrome library, with AirPlay 2 built in.",
+            "Rust · AirPlay 2 · github.com/domknez/dust")
+y = project(y, "haze", "2026 —",
+            "Desktop IPTV player: M3U, Xtream Codes, XMLTV guide with catch-up and VOD.",
+            "Rust · FFmpeg · github.com/domknez/haze")
+y = project(y, "drift", "2026 —",
+            "Lighter desktop client for Microsoft Teams: chats, channels and threads. Early days.",
+            "Rust · WebSockets · OAuth · releasing shortly")
 y -= 3
 y = label(CX, y, "Experience", CW)
 
@@ -284,8 +285,8 @@ y = project(y, "Fondion", "",
             "from hand-written SQL to the SQLAlchemy ORM.",
             "Python · FastAPI · SQLAlchemy · Alembic · React · PostgreSQL · AWS · Docker")
 y = project(y, "MontBlancAI", "Lead engineer",
-            "Industrial AI platform cutting machine downtime and optimising maintenance. Full product stack: "
-            "interface, backend services, and the Alpinist AI core that turns machine data into insight.",
+            "Industrial AI platform cutting machine downtime and optimising maintenance. Full stack: "
+            "interface, backend services, and the Alpinist AI core.",
             "Django · DRF · React · TypeScript · D3.js · PostgreSQL · Azure · Docker")
 y = project(y, "Takeaway", "",
             "Mobile food and drink ordering system taken from MVP to production: backend refactoring, build and "
