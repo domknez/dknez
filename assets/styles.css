@@ -134,13 +134,13 @@ a:hover { color: var(--fg); }
 
 /* ---------- layout ---------- */
 main { position: relative; z-index: 2; }
-section { max-width: var(--maxw); margin-inline: auto; padding: 84px var(--gutter); }
+section { max-width: var(--maxw); margin-inline: auto; padding: 58px var(--gutter); }
 .eyebrow { display: flex; align-items: baseline; gap: 14px; margin: 0 0 32px; font-family: var(--mono); font-size: 11px; font-weight: 500; line-height: 1.5; letter-spacing: .16em; text-transform: uppercase; color: var(--fg2); }
 h2.eyebrow, h3.eyebrow { font-family: var(--mono); }
 .eyebrow__l { font: inherit; letter-spacing: inherit; color: inherit; margin: 0; display: flex; align-items: baseline; gap: 14px; }
 .eyebrow__l > span:first-child { color: var(--acc); }
 .eyebrow > span:first-child { color: var(--acc); }
-.eyebrow--split { justify-content: space-between; }
+.eyebrow--split { flex-wrap: wrap; justify-content: space-between; row-gap: 12px; }
 .eyebrow__l { display: flex; align-items: baseline; gap: 14px; }
 .eyebrow--acc, .eyebrow--acc > span:first-child { color: var(--acc); }
 .eyebrow--acc { margin-bottom: 12px; }
@@ -290,7 +290,7 @@ h2.eyebrow, h3.eyebrow { font-family: var(--mono); }
 }
 @media (max-width: 620px) {
   :root { --gutter: 22px; --radius-card: 24px; }
-  section { padding: 56px var(--gutter); }
+  section { padding: 40px var(--gutter); }
   .card, .card--wide { padding: 26px 24px; }
   .feature { padding: 30px 26px; border-radius: 26px; }
   .contact { padding: 36px 26px; border-radius: 28px; }
@@ -302,6 +302,7 @@ h2.eyebrow, h3.eyebrow { font-family: var(--mono); }
   .btn--mail { font-size: 15px; padding: 0 18px; gap: 10px; height: 58px; }
   .btn { min-width: 0; }
   .foot { flex-direction: column; align-items: flex-start; }
+  .u-wide { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
