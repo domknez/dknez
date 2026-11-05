@@ -17,8 +17,8 @@ assets/
 files/
   Domagoj_Knez_CV.pdf   one-page CV, generated from tools/make-cv.py
 tools/
-  make-og.py        regenerates og.png (needs Pillow)
-  make-cv.py        regenerates the CV PDF (needs reportlab)
+  make-og.py        regenerates og.png (uv run tools/make-og.py)
+  make-cv.py        regenerates the CV PDF (uv run tools/make-cv.py)
   fonts/            Bricolage Grotesque, Space Grotesk, JetBrains Mono as TTF,
                     used by make-cv.py so the PDF matches the site
 ```
@@ -66,7 +66,7 @@ Delete Namecheap's default *URL Redirect* / parking records first, or the A reco
 ## Before going live
 
 - [x] `assets/portrait.jpg`
-- [x] `assets/og.png` — regenerate with `tools/make-og.py` if the photo or the strapline changes
+- [x] `assets/og.png` — regenerate with `uv run tools/make-og.py` if the photo or the strapline changes
 
 - [x] `files/Domagoj_Knez_CV.pdf`
 - [ ] GitHub and LinkedIn URLs in the contact section (currently `github.com/domknez`, `linkedin.com/in/dknez`)
@@ -86,9 +86,13 @@ Delete Namecheap's default *URL Redirect* / parking records first, or the A reco
 `tools/make-cv.py` draws the CV with ReportLab using the same fonts and Latte palette as the site, so the PDF and the page look like one thing. Text stays selectable and the fonts are embedded.
 
 ```sh
-python3 -m venv .venv && .venv/bin/pip install reportlab pillow
-.venv/bin/python tools/make-cv.py
+uv run tools/make-cv.py
 ```
+
+Both scripts in `tools/` carry their dependencies in a PEP 723 header, so `uv`
+builds a throwaway environment per script and nothing lands on the host Python.
+`reportlab` is pinned: the page is laid out by hand and a renderer change would
+move it.
 
 It lays out in one flowing column and breaks to a second page automatically if the content grows; page numbers only appear when there is more than one page.
 

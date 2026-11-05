@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.11"
+# dependencies = ["reportlab==5.1.0"]
+# ///
 """Generate files/Domagoj_Knez_CV.pdf in the same visual language as knez.dev.
 
-    python3 -m venv .venv && .venv/bin/pip install reportlab
-    .venv/bin/python tools/make-cv.py
+    uv run tools/make-cv.py
+
+uv reads the dependencies above and builds a throwaway environment for them,
+so nothing is installed on the host. reportlab is pinned because the page is
+laid out by hand and a renderer change would move it.
 """
 from pathlib import Path
 from reportlab.pdfgen import canvas as rl_canvas

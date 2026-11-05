@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.11"
+# dependencies = ["pillow>=11,<13"]
+# ///
 """Regenerate assets/og.png (1200x630 social preview card).
 
-Needs Pillow and the source portrait:
-    python3 -m venv .venv && .venv/bin/pip install pillow
-    .venv/bin/python tools/make-og.py path/to/portrait.png
+    uv run tools/make-og.py path/to/portrait.png
+
+uv reads the dependencies above and builds a throwaway environment for them,
+so nothing is installed on the host.
 """
 import sys
 from pathlib import Path
