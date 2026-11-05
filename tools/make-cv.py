@@ -305,30 +305,29 @@ y -= 3
 y = label(CX, y, "Experience", CW)
 
 y = company(y, "CoreTech d.o.o.", "Owner & Consultant", "2020 — present",
-            "Independent consultancy — long engagements, owning a slice of the product end to end. "
-            "Projects listed alphabetically.")
+            "Independent consultancy — long engagements, owning a slice of the product end to end.")
 y -= 2
 
-y = project(y, "Bondio", "Senior engineer",
-            "eSIM connectivity API for travel businesses, IoT platforms and resellers, across 1000+ networks in 200+ "
-            "countries. Backend services and the customer dashboard.",
-            "Nest.js · React · AWS · Terraform · Docker")
-y = project(y, "Fondion", "",
-            "ERP for the construction industry. Python backend, React frontend optimisation, and the team's migration "
-            "from hand-written SQL to the SQLAlchemy ORM.",
-            "Python · FastAPI · SQLAlchemy · Alembic · React · PostgreSQL · AWS · Docker")
 y = project(y, "MontBlancAI", "Lead engineer",
             "Industrial AI platform cutting machine downtime and optimising maintenance. Full stack: "
             "interface, backend services, and the Alpinist AI core.",
             "Django · DRF · React · TypeScript · D3.js · PostgreSQL · Azure · Docker")
-y = project(y, "Takeaway", "",
-            "Mobile food and drink ordering system taken from MVP to production: backend refactoring, build and "
-            "test pipelines, new features.",
-            "Node.js · Hapi · JavaScript · Vue.js · PostgreSQL · Redis · Docker")
+y = project(y, "Bondio", "Senior engineer",
+            "eSIM connectivity API for travel businesses, IoT platforms and resellers, across 1000+ networks in 200+ "
+            "countries. Backend services and the customer dashboard.",
+            "Nest.js · React · AWS · Terraform · Docker")
 y = project(y, "Tiketti", "Team lead",
             "Event ticketing platform plus a block builder for vendor pages. Rebuilt the legacy translation tool "
             "into the monorepo and reworked S3 and R2 handling.",
             "Node.js · Next.js · TypeScript · Hono · Cloudflare · AWS · Terraform · Docker")
+y = project(y, "Takeaway", "",
+            "Mobile food and drink ordering system taken from MVP to production: backend refactoring, build and "
+            "test pipelines, new features.",
+            "Node.js · Hapi · JavaScript · Vue.js · PostgreSQL · Redis · Docker")
+y = project(y, "Fondion", "",
+            "ERP for the construction industry. Python backend, React frontend optimisation, and the team's migration "
+            "from hand-written SQL to the SQLAlchemy ORM.",
+            "Python · FastAPI · SQLAlchemy · Alembic · React · PostgreSQL · AWS · Docker")
 
 y = company(y, "FreshBooks", "Senior Software Engineer & Team Lead", "Jun 2021 — Nov 2024",
             "Django microservice with DRF fronting core services, serving REST APIs to two React applications. Moved "
