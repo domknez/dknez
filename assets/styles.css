@@ -191,7 +191,6 @@ h2.eyebrow, h3.eyebrow { font-family: var(--mono); }
 .feature__tags { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
 .feature h3 { font-size: clamp(32px, 4vw, 46px); margin-bottom: 16px; }
 .feature__body { font-size: 18px; line-height: 1.7; color: var(--fg2); max-width: 660px; }
-.tech--left { justify-content: flex-start; margin-top: 20px; }
 .feature__link { margin-top: 20px; font-family: var(--mono); font-size: 13px; }
 .feature__link a { color: var(--acc); }
 .feature__link a:hover { color: var(--fg); }
@@ -218,6 +217,7 @@ h2.eyebrow, h3.eyebrow { font-family: var(--mono); }
 .project__meta { font-family: var(--mono); font-size: 11px; font-weight: 400; letter-spacing: .08em; color: var(--fg3); margin-left: 6px; }
 .project__body p { font-size: 16px; line-height: 1.6; color: var(--fg2); }
 .tech { display: flex; flex-wrap: wrap; gap: 7px; justify-content: flex-end; }
+.tech--left { justify-content: flex-start; margin-top: 20px; }
 .tk { padding: 5px 12px; border-radius: 999px; font-family: var(--mono); font-size: 11px; border: 1px solid; white-space: nowrap; }
 .tk-py  { color: var(--tk-py);  background: color-mix(in oklab, var(--tk-py) 10%, transparent);  border-color: color-mix(in oklab, var(--tk-py) 28%, transparent); }
 .tk-js  { color: var(--tk-js);  background: color-mix(in oklab, var(--tk-js) 10%, transparent);  border-color: color-mix(in oklab, var(--tk-js) 28%, transparent); }
